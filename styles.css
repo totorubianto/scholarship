@@ -1111,12 +1111,72 @@ a { text-decoration: none; color: inherit; }
     .benefit-card.featured { transform: none; }
     .steps-timeline { grid-template-columns: 1fr; }
     .hero-avatar-float { display: none; }
+    .features-orbit { 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 16px; 
+    }
+    .feature-item { 
+        position: static; 
+        transform: none !important; 
+    }
+    .hero-stats {
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px 24px;
+    }
+    .stat-divider {
+        width: 1px;
+        height: 30px;
+    }
+    .smk-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 640px) {
-    .nav { top: 16px; width: calc(100% - 32px); }
+    .container { padding: 0 20px; }
+    .nav { top: 12px; width: calc(100% - 24px); }
+    .nav-inner { padding: 10px 14px; }
     .lang-btn { display: none; }
+    .btn-nav { padding: 8px 12px; font-size: 13px; }
+    .hero-section { padding: 100px 0 60px; }
+    .hero-title { font-size: clamp(36px, 9vw, 56px); }
+    .hero-badge { padding: 10px 18px; font-size: 11px; }
+    .hero-subtitle { font-size: 16px; padding: 0 10px; }
+    .hero-cta { 
+        flex-direction: column; 
+        align-items: center;
+        gap: 12px;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    .hero-stats {
+        flex-direction: row;
+        gap: 16px;
+        padding: 16px 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .stat-number { font-size: 24px; }
+    .stat-label { font-size: 10px; }
+    .stat-divider { height: 24px; }
     .challenges-grid { grid-template-columns: 1fr; }
-    .referral-inner { flex-direction: column; text-align: center; }
-    .store-buttons { flex-direction: column; align-items: center; }
+    .section-title { font-size: clamp(24px, 6vw, 32px); }
+    .features-orbit { 
+        grid-template-columns: 1fr; 
+    }
+    .solution-title { font-size: clamp(24px, 6vw, 32px); }
+    .mia-avatar-container { width: 80px; height: 80px; }
+    .cta-box { padding: 40px 20px; }
+    .cta-avatar { width: 80px; height: 80px; }
+    .cta-avatar img { width: 60px; height: 60px; }
+    .referral-inner { flex-direction: column; text-align: center; gap: 16px; }
+    .store-buttons { flex-direction: column; align-items: center; width: 100%; }
+    .store-btn { width: 100%; max-width: 220px; justify-content: center; }
+    .footer { padding: 40px 20px; }
+    .footer-brand h2 { font-size: 24px; }
 }
